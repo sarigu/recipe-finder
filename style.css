@@ -1,0 +1,177 @@
+body{
+  width:100%;
+  font-family: 'Work Sans', sans-serif !important;
+  margin:0;
+  padding:0;
+  background-color: #DBE8F8;  
+}
+
+/* ////////////  Menu  /////////////// */
+
+#menu{
+  background-color: whitesmoke;
+  height:100px;
+  width:100px;
+  float: right;
+  border-radius: 0 0 50px 50px;
+  margin-right:20px;
+}
+
+#menu h2{
+  text-align: center;
+  margin-top:25%; 
+}
+
+#menu:hover{
+  cursor: pointer;
+  color: #7e7e7e;
+}
+
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: whitesmoke;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  color:black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #7e7e7e;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* ////////////   Front Page  /////////////// */
+
+#frontpage-main{
+  height:100vh;
+}
+
+h1{
+  margin:0;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#frontpage-container{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#info-container h1{
+  font-size: 3.5em;
+}
+
+#info-container{
+  width:60%;
+}
+
+#frontpage-container img{
+  width: 40%;
+}
+
+#options-container{
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+}
+
+#sweets-option-container, #meals-option-container{
+  background-image: url("images/smoothies.jpg");
+  background-size: cover;
+  width: 70%;
+  height:150px;
+  margin:20px;
+  border-radius: 20px;
+}
+
+#sweets-option-container:hover, #meals-option-container:hover{
+  cursor: pointer;
+}
+
+
+/* ////////////   Carousel  /////////////// */
+
+.carousel {
+  width: 550px;
+  height: 350px;
+  margin: auto;
+}
+
+
+.caption-tags,
+.time-tags{
+  display: inline-flex;
+  padding: 2px 5px 2px 5px;
+  border-radius: 8px;
+  border: white solid 2px;
+  margin-right: 5px;
+}
+
+.tags-container {
+  display: inline-flex;
+}
+
+.tags-container *  {
+  padding: 2px 5px 2px 5px;
+  border-radius: 8px;
+  border: white solid 2px;
+  margin-right: 5px;
+}
+
+.time-container {
+  margin-bottom: 10px;
+}
+
+.modal {
+  text-align: left;
+}
+
+.modal-tags,
+.modal-time-container div {
+  display: inline-flex;
+  padding: 2px 5px 2px 5px;
+  border-radius: 8px;
+  border: black solid 2px;
+}
+
+.modal-time-container div {
+  margin: 20px 5px 10px 0px;
+}
+
+.modal-tags {
+  margin: 0px 5px 20px 0px;
+}
+
