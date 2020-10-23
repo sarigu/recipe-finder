@@ -189,6 +189,10 @@ h2{
   border-radius: 20px;
 }
 
+.carousel-inner img{
+  filter: brightness(72%);
+}
+
 .caption-tags,
 .time-tags{
   display: inline-flex;
