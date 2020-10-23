@@ -10,7 +10,7 @@ body{
 
 main{
   height:100vh;
-  padding:0 5vw 0 5vw;
+  margin:0 5vw 0 5vw;
 }
 
 h1{
@@ -270,5 +270,27 @@ h2{
 /* ////////////   About  /////////////// */
 
 #about-container{
-  padding: 10%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 40px 80px 0 80px;
+}
+
+#about-info-container{
+  width:50%;
+}
+
+#about-info-container h1{
+  text-align: left;
+}
+
+
+#about-img-container{
+  width: 50%;
+}
+
+#about-img-container img{
+  width: 120%;
+
+
 }
