@@ -39,11 +39,17 @@ include_once('connection.php');
   <div id="full-menu" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-                <a href="index.html">
+            <a href="index.html">
                     <h1>Home</h1>
                 </a>
-                <a href="#">
+                <a href="about.html">
                     <h1>About</h1>
+                </a>
+                <a href="#" onclick="redirectToMeals()">
+                    <h1>Meals Finder</h1>
+                </a>
+                <a href="#" onclick="redirectToSweets()">
+                    <h1>Sweets Finder</h1>
                 </a>
             </div>
       </div>
@@ -126,7 +132,6 @@ include_once('connection.php');
               <div class="modal-body">
                 <img
                   class="d-block w-100"
-                  src="images/dumplings.jpg"
                   alt="Fourthslide"
                 />
                 <div class="modal-time-container">
@@ -153,6 +158,8 @@ include_once('connection.php');
   </main>
   <script>
 
+      //      Variables
+
        //recipe slideshow
       let img = document.querySelector(".carousel-item img");
       let title = document.querySelector(".carousel-caption h2");
@@ -168,6 +175,8 @@ include_once('connection.php');
       let modalIngredients = document.querySelector("#modal-ingredients");
       var recipe;
       var category;
+
+      //      Functions
   
       init();
       
@@ -177,14 +186,6 @@ include_once('connection.php');
         });
         getCategory();
       }
-
-      function openNav() {
-        document.getElementById("full-menu").style.height = "100%";
-      }
-
-        function closeNav() {
-            document.getElementById("full-menu").style.height = "0%";
-        }
 
 
       function getCategory(){
@@ -204,9 +205,7 @@ include_once('connection.php');
             var connection = await fetch('getRecipeSweets.php');
         }
         
-        //var connection = await fetch('getRecipeSweets.php');
         var jData = await connection.json();
-        //console.log(jData);
         recipe= jData.recipe;
         tagsArr= jData.tags;
         ingredientsArr = jData.ingredients; 
@@ -246,6 +245,25 @@ include_once('connection.php');
           )
         );
       }
+
+       //      Menu Functions
+
+      function openNav() {
+        document.getElementById("full-menu").style.height = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("full-menu").style.height = "0%";
+      }
+
+      function redirectToSweets() {
+        window.location.href = "recipeFinder.php?category=sweets";
+      }
+
+      function redirectToMeals() {
+        window.location.href = "recipeFinder.php?category=meals";
+      }
+
    
       </script>
 </body>

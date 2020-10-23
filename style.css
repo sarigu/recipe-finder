@@ -1,3 +1,5 @@
+/* ////////////  General  /////////////// */
+
 body{
   width:100%;
   font-family: 'Work Sans', sans-serif !important;
@@ -5,6 +7,25 @@ body{
   padding:0;
   background-color: #DBE8F8;  
 }
+
+main{
+  height:100vh;
+  padding:0 5vw 0 5vw;
+}
+
+h1{
+  margin:0;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
 
 /* ////////////  Menu  /////////////// */
 
@@ -14,7 +35,6 @@ body{
   width:100px;
   float: right;
   border-radius: 0 0 50px 50px;
-  margin-right:20px;
 }
 
 #menu h2{
@@ -26,7 +46,6 @@ body{
   cursor: pointer;
   color: #7e7e7e;
 }
-
 
 .overlay {
   height: 0%;
@@ -67,54 +86,86 @@ body{
   font-size: 60px;
 }
 
+
+
 /* ////////////   Front Page  /////////////// */
-
-#frontpage-main{
-  height:100vh;
-}
-
-h1{
-  margin:0;
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-h2{
-  font-size: 1.5em;
-  font-weight: bold;
-}
 
 #frontpage-container{
   display: flex;
   flex-wrap: nowrap;
-}
-
-#info-container h1{
-  font-size: 3.5em;
-}
-
-#info-container{
-  width:60%;
+  align-items: center;
 }
 
 #frontpage-container img{
-  width: 40%;
+  width: 35%;
 }
 
-#options-container{
+#info-container{
+  width:65%;
   display: flex;
   flex-direction: column;
   margin:auto;
+  align-items: center;
+  padding:50px;
+}
+
+#headings-container h1:nth-child(1){
+  font-size: 3.3em;
+  float: left;
+  margin-bottom:10px;
+}
+
+#headings-container h1:nth-child(2){
+  font-size: 2.5em;
+  float: left;
+}
+
+#options-container{
+  width: 90%;
+  margin:30px 0;
 }
 
 #sweets-option-container, #meals-option-container{
-  background-image: url("images/smoothies.jpg");
+  height:115px;
+  margin:10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#sweets-img, #meals-img{
+  height:100%;
+  width:40%;
+  border-radius: 0 20px 20px 0;
+}
+
+#sweets-img{
+  background-image: url("images/christmas_squares.jpg");
   background-size: cover;
-  width: 70%;
-  height:150px;
-  margin:20px;
-  border-radius: 20px;
+}
+
+#meals-img{
+  background-image: url("images/dumplings-2.jpg");
+  background-size: cover;
+}
+
+#sweets-txt, #meals-txt{
+  width:60%;
+  height:100%;
+  border-radius: 20px 0 0 20px;
+}
+
+#sweets-txt{
+  background-color: #eb685a;
+}
+
+#meals-txt{
+  background-color: #f68f69;
+}
+
+#sweets-txt h2, #meals-txt h2{
+  text-align: center;
+  position: relative;
+  top: 20%;
 }
 
 #sweets-option-container:hover, #meals-option-container:hover{
@@ -122,14 +173,21 @@ h2{
 }
 
 
-/* ////////////   Carousel  /////////////// */
+
+/* ////////////   Recipe Finder Carousel  /////////////// */
 
 .carousel {
   width: 550px;
   height: 350px;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.carousel-inner{
+  border-radius: 20px;
+}
 
 .caption-tags,
 .time-tags{
@@ -142,10 +200,11 @@ h2{
 
 .tags-container {
   display: inline-flex;
+  font-weight: 600;
 }
 
 .tags-container *  {
-  padding: 2px 5px 2px 5px;
+  padding: 5px;
   border-radius: 8px;
   border: white solid 2px;
   margin-right: 5px;
@@ -153,25 +212,59 @@ h2{
 
 .time-container {
   margin-bottom: 10px;
+  font-weight: 600;
+  padding: 5px;
 }
+
+
+
+/* ////////////   Recipe Finder Modal  /////////////// */
 
 .modal {
   text-align: left;
 }
 
+.modal-header{
+  border-bottom: none;
+}
+
+.modal-body img{
+  border-radius: 20px;
+}
+
+.modal-body{
+  padding: 0 1.2rem 1rem 1.2rem;
+}
+
 .modal-tags,
 .modal-time-container div {
   display: inline-flex;
-  padding: 2px 5px 2px 5px;
+  padding: 5px;
   border-radius: 8px;
   border: black solid 2px;
+  font-weight: 600;
 }
 
 .modal-time-container div {
-  margin: 20px 5px 10px 0px;
+  margin: 30px 5px 10px 0px;
 }
 
 .modal-tags {
   margin: 0px 5px 20px 0px;
 }
 
+.modal-tags-container{
+  margin-bottom:8px;
+}
+
+#modal-ingredients{
+  margin-bottom: 30px;
+}
+
+
+
+/* ////////////   About  /////////////// */
+
+#about-container{
+  padding: 10%;
+}
