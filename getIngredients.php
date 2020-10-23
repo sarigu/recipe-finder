@@ -18,7 +18,7 @@ try{
     $ingredientsArr = []; 
 
     foreach($ingredients as $ingredient){
-       $fullIngredient =  $ingredient->Name . "  ". $ingredient->Amount;
+       $fullIngredient =  $ingredient->Amount  . "  ". $ingredient->Name;
         array_push($ingredientsArr, $fullIngredient);
     }
 
