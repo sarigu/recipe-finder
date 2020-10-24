@@ -214,7 +214,7 @@ h2{
 }
 
 .tags-container *  {
-  padding: 5px;
+  padding: 2px 5px 2px 5px;
   border-radius: 8px;
   border: white solid 2px;
   margin-right: 5px;
@@ -506,6 +506,19 @@ h2{
     width: 80%;
     height: auto;
   }
+
+  .caption-tags,
+  .time-tags{
+    margin-bottom:5px;
+  }
+
+  .time-container {
+    margin-bottom: 0px;
+  }
+
+  .carousel-caption{
+  bottom:0px;
+  }
 }
 
 @media (max-width: 380px) {  
@@ -540,7 +553,6 @@ h2{
     font-size: 1.1em;
   }
 
-
   #sweets-option-container, #meals-option-container{
     height:60px;
   }  
@@ -558,4 +570,19 @@ h2{
     top: 38%;
     left: 50%;
   }
+
+  .carousel-caption{
+    padding-bottom:0px;
+    padding-top:0px;
+   }
+
+  .caption-tags,
+  .time-tags{
+    padding: 2px;
+  }
+
+  .tags-container *  {
+    padding: 2px;
+  }
+
 }

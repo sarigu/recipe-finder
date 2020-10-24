@@ -68,7 +68,7 @@ include_once('connection.php');
                 src=""
                 alt="First slide"
               />
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption d-md-block">
                 <h2></h2>
                 <div class="time-container">
                   <div class="time-tags"></div>
