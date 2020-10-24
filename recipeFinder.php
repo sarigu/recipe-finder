@@ -2,8 +2,6 @@
 
 include_once('connection.php'); 
 
-//echo json_encode($all);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
