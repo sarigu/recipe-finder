@@ -1,8 +1,7 @@
 <?php
-
-include_once('connection.php'); 
-
+  include_once('connection.php'); 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,87 +32,85 @@ include_once('connection.php');
 
 <body>
   <main>
-
-  <div id="full-menu" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-            <a href="index.html">
-                    <h1>Home</h1>
-                </a>
-                <a href="about.html">
-                    <h1>About</h1>
-                </a>
-                <a href="#" onclick="redirectToMeals()">
-                    <h1>Meals Finder</h1>
-                </a>
-                <a href="#" onclick="redirectToSweets()">
-                    <h1>Sweets Finder</h1>
-                </a>
-            </div>
-      </div>
-
-      <div id="menu" onclick="openNav()">
-            <h2>Menu</h2>
+    <div id="full-menu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">
+            <h1>Home</h1>
+          </a>
+          <a href="about.html">
+            <h1>About</h1>
+          </a>
+          <a href="#" onclick="redirectToMeals()">
+            <h1>Meals Finder</h1>
+          </a>
+          <a href="#" onclick="redirectToSweets()">
+            <h1>Sweets Finder</h1>
+          </a>
         </div>
+    </div>
+    <div id="menu" onclick="openNav()">
+      <h2>Menu</h2>
+    </div>
     <section id="recipe-tinder">
     <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                class="d-block w-100"
-                src=""
-                alt="First slide"
-              />
-              <div class="carousel-caption d-md-block">
-                <h2></h2>
-                <div class="time-container">
-                  <div class="time-tags"></div>
-                  <div class="time-tags"></div>
-                </div>
-                <div class="tags-container">
-                </div>
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            class="d-block w-100"
+            src=""
+            alt="First slide"
+          />
+          <div class="carousel-caption d-md-block">
+            <h2></h2>
+            <div class="time-container">
+              <div class="time-tags"></div>
+              <div class="time-tags"></div>
+            </div>
+            <div class="tags-container">
               </div>
             </div>
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-          >
-            <!-- data-slide="prev" above-->
-            <span
-              class="carousel-control-prev-icon"
-              aria-hidden="true"
-              onclick="randomRecipe()"
-            ></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-          >
-            <span
-              class="carousel-control-next-icon"
-              aria-hidden="true"
-              onclick="showRecipe()"
-            ></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+      >
+        <!-- data-slide="prev" above-->
+        <span
+          class="carousel-control-prev-icon"
           aria-hidden="true"
-        >
+          onclick="randomRecipe()"
+        ></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+      >
+        <span
+          class="carousel-control-next-icon"
+          aria-hidden="true"
+          onclick="showRecipe()"
+        ></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -152,11 +149,10 @@ include_once('connection.php');
             </div>
           </div>
         </div>
-    </section>
-  </main>
+      </section>
+    </main>
   <script>
-
-      //      Variables
+      //    Variables
 
        //recipe slideshow
       let img = document.querySelector(".carousel-item img");
@@ -185,7 +181,6 @@ include_once('connection.php');
         getCategory();
       }
 
-
       function getCategory(){
         var url_string = window.location.href;
         var url = new URL(url_string);
@@ -194,7 +189,6 @@ include_once('connection.php');
       }
 
       async function randomRecipe() {
-       // console.log(category); 
         if(typeof category === 'undefined'){
           window.location.href = "index.html";
         } else if(category === 'meals'){
@@ -244,6 +238,7 @@ include_once('connection.php');
         );
       }
 
+
        //      Menu Functions
 
       function openNav() {
@@ -261,8 +256,6 @@ include_once('connection.php');
       function redirectToMeals() {
         window.location.href = "recipeFinder.php?category=meals";
       }
-
-   
       </script>
 </body>
 
